@@ -9,7 +9,7 @@
     justify-content:center;
     width:100%;
     height:90vh;
-    background-color: blue;
+    background-color: black;
 }
 
 .container{
@@ -20,30 +20,31 @@
 }
 
 .row{
-    width:calc(100%/5);
-    gap:0.5rem;
-    /* margin:1px; */
-    /* border:1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    /* height:calc(100%/7); */
+    /* width:calc(100%/5); */
 }
 
 .column{
-    background-image: url("https://picsum.photos/300/200");
-    background-size: cover;
-    height:calc(100%/7);
-    /* margin:1px; */
-    /* border:1px solid black; */
+    display: flex;
+    width:calc(100%/7);
+    height:calc(100%/5);
 }
 
 #site_footer{
     display: flex;
     justify-content: space-between;
-    background-color: darkgray;
+    align-items: center;
+    background-color: black;
     height:10vh;
     width:100vw;
 }
 
 .audio_video{
+    display: flex;
     border:1px solid black;
+    width:8%;
 }
 
 .room_actions{
@@ -52,4 +53,23 @@
 
 .end_meeting{
     border:1px solid black;
+}
+
+/* utility for all buttons */
+
+.buttons{
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    color:white;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.buttons_text{
+    width:100%;
+    position:absolute;
+    top:2rem;
+    font-size:0.4rem;
 }

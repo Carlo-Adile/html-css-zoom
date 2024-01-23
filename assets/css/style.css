@@ -4,6 +4,7 @@
 
 :root{
     --footer:#222222;
+    --borders:#808080ce;
 }
 
 #site_main{
@@ -52,15 +53,16 @@
     left:0.2vw;
     color:white;
     font-family: sans-serif;
-    background-color: rgba(128, 128, 128, 0.806);
+    background-color: var(--borders);
     font-size:1.8vh;
     padding:0.4vh;
 }
 
 #site_footer{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--footer);
     height:10vh;
     width:100vw;
@@ -68,33 +70,41 @@
 
 .audio_video{
     display: flex;
-    border:1px solid black;
-    width:8%;
-}
-
-.room_actions{
-    border:1px solid black;
-}
-
-.end_meeting{
-    border:1px solid black;
 }
 
 /* utility for all buttons */
 
 .buttons{
-    position:relative;
     display: flex;
-    flex-wrap: wrap;
-    gap:2rem;
+    gap:2vh;
+    margin:1vh;
     color:white;
     list-style: none;
-    font-size: 1.5rem;
+    text-align: center;
+    padding:0;
 }
 
-.buttons_text{
-    width:100%;
-    position:absolute;
-    top:2rem;
-    font-size:0.4rem;
+.buttons i{
+    font-size:2.8vh;
 }
+
+.buttons p{
+    width:100%;
+    font-family: sans-serif;
+    line-height: 3vh;
+    font-size:1.5vh;
+}
+
+#end_meeting{
+    color:red;
+    background-color: var(--borders);
+}
+
+#chevron{
+    font-size:1.2vh;
+}
+
+#share_screen{
+    color:yellow;
+}
+

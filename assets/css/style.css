@@ -2,6 +2,10 @@
     margin:0;
 }
 
+:root{
+    --footer:#222222;
+}
+
 #site_main{
     display: flex;
     flex-wrap:wrap;
@@ -27,13 +31,14 @@
 }
 
 .column{
+    position:relative;
     display:flex;
     flex-wrap: wrap;
     /* border:1px solid white; */
     width:calc(100%/7);
-    padding-right:2px;
-    padding-left:2px;
-    padding-bottom:10px;
+    padding-right:0.2vw;
+    padding-left:0.2vw;
+    padding-bottom:1vh;
 }
 
 .column img{
@@ -41,11 +46,22 @@
     height:100%;
 }
 
+.user{
+    position:absolute;
+    bottom:1.3vh;
+    left:0.2vw;
+    color:white;
+    font-family: sans-serif;
+    background-color: rgba(128, 128, 128, 0.806);
+    font-size:1.8vh;
+    padding:0.4vh;
+}
+
 #site_footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: var(--footer);
     height:10vh;
     width:100vw;
 }
